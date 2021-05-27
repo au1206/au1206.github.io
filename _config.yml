@@ -15,9 +15,11 @@
 # in the templates via {{ site.myvariable }}.
 title: Akshay Uppal
 repository: au1206/au1206.github.io
+baseurl: ""
+url: "https://au1206.github.io"
 email: akshayuppal12@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  welcome to my blog
+  Welcome to my blog where I will post "all things ML" - code, blogs, paper annotations, my web APIs and more. 
 twitter_username: akshayuppal12  
 github_username: au1206
 minimal_mistakes_skin: dark
@@ -59,10 +61,10 @@ plugins:
 author:
   name   : "Akshay Uppal"
   avatar : "/assets/images/bio-photo.png"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  bio    : "A Machine Learning Engineer, working for a leading Intelligent Data Processing Startup. Passionate about ML, MLOps, ML Reserch"
   links:
     - label: "LinkedIn"
-      icon: "fas fa-fw fa-linkedin-square"
+      icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/uppalakshay/"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
@@ -72,12 +74,12 @@ author:
       url: "https://github.com/au1206"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://instagram.com/akshayuppal12"
 
 footer:
   links:
     - label: "LinkedIn"
-      icon: "fas fa-fw fa-linkedin-square"
+      icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/uppalakshay/"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
@@ -87,7 +89,7 @@ footer:
       url: "https://github.com/au1206"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://instagram.com/akshayuppal12"
 
 defaults:
   # _posts
