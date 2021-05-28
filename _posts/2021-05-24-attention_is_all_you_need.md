@@ -1,6 +1,7 @@
 ---
 title: "Attention Is All You Need Annotated Paper"
 date: 2021-05-23T15:34:30-04:00
+classes: wide
 categories:
   - Annotated Paper
 tags:

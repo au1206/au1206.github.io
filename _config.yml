@@ -61,7 +61,7 @@ plugins:
 author:
   name   : "Akshay Uppal"
   avatar : "/assets/images/bio-photo.png"
-  bio    : "A Machine Learning Engineer, working for a leading Intelligent Data Processing Startup. Passionate about ML, MLOps, ML Reserch"
+  bio    : "A Machine Learning Engineer, working for a leading Intelligent Data Processing Startup. Passionate about ML, MLOps, ML Research"
   links:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
@@ -74,7 +74,7 @@ author:
       url: "https://github.com/au1206"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/akshayuppal12"
+      url: "https://instagram.com/akshay_uppal12"
 
 footer:
   links:
@@ -89,7 +89,7 @@ footer:
       url: "https://github.com/au1206"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/akshayuppal12"
+      url: "https://instagram.com/akshay_uppal12"
 
 defaults:
   # _posts
