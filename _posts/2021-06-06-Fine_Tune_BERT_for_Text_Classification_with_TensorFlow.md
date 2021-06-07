@@ -16,8 +16,8 @@ tags:
 We will be using Google Colab for this tutorial as we would require a GPU to fine-tune BERT.
 
 ## Prerequisites:
-- Willingness to learn: Growth Mindset is all you need. :smile:
-- Some basic idea about Tensorflow/Keras and BERT. :thought_balloon:
+- Willingness to learn: A Growth Mindset is all you need. :smile:
+- Some basic knowledge about Tensorflow/Keras and BERT. :thought_balloon:
 - Some Python to follow along with the code. :man_technologist: :woman_technologist:<br>
 
 <div align="center">
@@ -25,7 +25,7 @@ We will be using Google Colab for this tutorial as we would require a GPU to fin
     <p style="text-align: center;color:gray">Figure 1: BERT Classification Model</p>
 </div>
 
-## Initial Set Up
+## Initial Set-Up
 
 ### Install TensorFlow and TensorFlow Model Garden
 
@@ -54,7 +54,7 @@ Cloning the Github Repo for tensorflow models
 ```python
 # install requirements to use tensorflow/models repository
 !pip install -Uqr models/official/requirements.txt
-# you may have to restart the runtime afterwards also ignore any ERRORS popping up at this step
+# you may have to restart the runtime after the above step. Please ignore any ERRORS popping up at this step
 ```
 
 **Note**: After installing the required Python packages, you'll need to restart the Colab Runtime Engine (Menu ---> Runtime ---> Restart runtime...)
@@ -306,7 +306,7 @@ print('Label Distribution in validation set is \n{}.'.format(valid_df['target'].
     Name: target, dtype: int64.
 
 
-So looks like the train and validation set are similar in terms of class imbalance and the various lengths in the question texts.
+So it looks like the train and validation set are similar in terms of class imbalance and the various lengths in the question texts.
 
 
 ```python
@@ -392,7 +392,7 @@ plt.title('Distribution of question text length in characters')
     
 
 
-Even the distribution of question length in words and characters is very similar, looks like a good train test split so far.
+Even the distribution of question length in words and characters is very similar. It looks like a good train test split so far.
 
 ---
 <br>
@@ -422,8 +422,7 @@ with tf.device('/cpu:0'):
 
 ## Lets BERT: Get the Pre-trained BERT Model from TensorFlow Hub
 
-We will be using the uncased BERT present in the tfhub, in order the prepare the text to be given to the BERT layer.
-We need to first tokenize the words, the tokenizer here is present as an model asset and will do uncasing for us as well 
+We will be using the uncased BERT present in the tfhub. In order to prepare the text to be given to the BERT layer, we need to first tokenize our words. The tokenizer here is present as a model asset and will do uncasing for us as well 
 
 
 ```python
@@ -466,25 +465,25 @@ Each line of the dataset is composed of the review text and its label.
 Data preprocessing consists of transforming text to BERT input features:
 `input_word_ids`, `input_mask`, `segment_ids/input_type_ids`
 
-- **Input Word Ids:** Output of our tokenizer, converting each sentence into set of token ids.
+- **Input Word Ids:** Output of our tokenizer, converting each sentence into a set of token ids.
 
-- **Input Masks:** Since we are padding all the sequences to 128(max sequence length), it is important that we create some sort of a mask to make sure those paddings do not interfere with the actual text tokens. Therefore we need a generate input mask blocking the paddings, The mask has 1 for real tokens and 0 for padding tokens. Only real
+- **Input Masks:** Since we are padding all the sequences to 128(max sequence length), it is important that we create some sort of mask to make sure those paddings do not interfere with the actual text tokens. Therefore we need a generate input mask blocking the paddings. The mask has 1 for real tokens and 0 for padding tokens. Only real
 tokens are attended to.
 
-- **Segment Ids:** For out task of text classification, since there is only one sequence, the segment_ids/input_type_ids is basically just a vector of 0s. 
+- **Segment Ids:** For out task of text classification, since there is only one sequence, the segment_ids/input_type_ids is essentially just a vector of 0s. 
 
 
 
-Bert was trained on 2 tasks:
+Bert was trained on two tasks:
 - fill in randomly masked words from a sentence.
-- given 2 sentences which came first. 
+- given two sentences,  which sentence came first. 
 
 
 
 
 ```python
-# This provides a function to convert row to input features and label, 
-# this uses the classifier_data_lib which is a class defined in the tensorflow model garden we installed earlier
+# This provides a function to convert a row to input features and label. 
+# this uses the classifier_data_lib. It is a class defined in the tensorflow model garden we installed earlier
 
 def create_feature(text, label, label_list=label_list, max_seq_length=max_seq_length, tokenizer=tokenizer):
   """
@@ -555,7 +554,7 @@ def create_feature_map(text, label):
   return (x, label_id)
 
   # the final datapoint passed to the model is of the format a dictionary as x and labels.
-  # the dictionary have keys which should obv match
+  # the dictionary has keys which should obv match
 ```
 
 ## Let the Data Flow: Creating the final input pipeline using `tf.data`
@@ -615,7 +614,7 @@ valid_data.element_spec
 ---
 <br>
 
-# Lets Model Our Way to Glory!!!
+# Let Us Model Our Way to Glory!!!
 
 ## Create The Model
 
@@ -623,7 +622,7 @@ There are two outputs from the BERT Layer:
 - A pooled_output of shape [batch_size, 768] with representations for the entire input sequences.  
 - A sequence_output of shape [batch_size, max_seq_length, 768] with representations for each input token (in context).
 
-For the classification we are only concerned with the pooled_output.
+For the classification task, we are only concerned with the pooled_output.
 
 
 ```python
@@ -656,11 +655,11 @@ def create_model():
   
 ```
 
-## Let Us Train !
+## Let Us Train!
 
 
 ```python
-# Calling the create model function to get teh keras based functional model
+# Calling the create model function to get the Keras based functional model
 model = create_model()
 ```
 
@@ -697,7 +696,7 @@ model.summary()
     __________________________________________________________________________________________________
 
 
-One drawback of the tf hub is that we import the entire module as a layer in keras as a result of which we dont see the parameters and layers in the model summary.
+One drawback of the tfhub is that we import the entire module as a layer in keras, as a result of which we do not see the parameters and layers in the model summary.
 
 
 ```python
@@ -739,7 +738,7 @@ history = model.fit(train_data,
     2040/2040 [==============================] - 1718s 842ms/step - loss: 0.0151 - binary_accuracy: 0.9948 - val_loss: 0.2421 - val_binary_accuracy: 0.9550
 
 
-## Lets Look at some Graphs
+## Let Us Look at some Graphs
 
 These Graphs will mainly be useful when we are training for more epochs and more data
 
@@ -788,11 +787,11 @@ create_graphs(history)
 
 
 
-Hopefully This was useful for you and by now you have a small kickstart on training and utilizing BERT for a variety of downstream tasks like classification, Named Entity Recognition, Sentence filling and many more.
+Hopefully, this was useful for you, and by now, you have a small kickstart on training and utilizing BERT for a variety of downstream tasks like classification, Named Entity Recognition, Sentence filling, and many more.
 
-You can check out and get the entire code in a form of notebook and also run it on colab from this [Github Repo](https://github.com/au1206/Fine_Tuning_BERT)
+You can check out and get the entire code as a notebook and run it on colab from this [Github Repo](https://github.com/au1206/Fine_Tuning_BERT).
 
-If this was helpful consider sharing it with more people so they can also learn about it...
+If this was helpful, consider sharing it with more people so they can also learn about it.
 
 Coming up Next:
 - BERT Annotated Paper
