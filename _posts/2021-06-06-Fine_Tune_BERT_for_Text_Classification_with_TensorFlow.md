@@ -16,9 +16,9 @@ tags:
 We will be using Google Colab for this tutorial as we would require a GPU to fine-tune BERT.
 
 ## Prerequisites:
-- Willingness to learn: Growth Mindset is all you need :smile:
-- Some basic idea about Tensorflow/Keras and BERT :thought_balloon:
-- Some Python to follow along with the code :man_technologist: :woman_technologist:<br>
+- Willingness to learn: Growth Mindset is all you need. :smile:
+- Some basic idea about Tensorflow/Keras and BERT. :thought_balloon:
+- Some Python to follow along with the code. :man_technologist: :woman_technologist:<br>
 
 <div align="center">
     <img width="512px" src='https://drive.google.com/uc?id=1mBqrfxng42SgSXvK62V1C67Or_vgrsVm' />
@@ -97,7 +97,7 @@ print("GPU is", "available" if tf.config.experimental.list_physical_devices("GPU
 
 - The data we will use is the dataset provided on the [Quora Insincere Questions Classification competition on Kaggle](https://www.kaggle.com/c/quora-insincere-questions-classification/data). 
 
-- Please feel free to download the train set from kaggle or use the link below to download the train.csv from that competition [https://archive.org/download/quora_dataset_train.csv/quora_dataset_train.csv.zip](https://archive.org/download/quora_dataset_train.csv/quora_dataset_train.csv.zip). 
+- Please feel free to download the train set from Kaggle or use the link below to download the train.csv from that competition [https://archive.org/download/quora_dataset_train.csv/quora_dataset_train.csv.zip](https://archive.org/download/quora_dataset_train.csv/quora_dataset_train.csv.zip). 
 
 - Let us decompress and read the data into a pandas DataFrame.
 
@@ -306,7 +306,7 @@ print('Label Distribution in validation set is \n{}.'.format(valid_df['target'].
     Name: target, dtype: int64.
 
 
-So Looks like the train and validation set a re similar in terms of class imbalance and the various lengths in the question texts
+So looks like the train and validation set are similar in terms of class imbalance and the various lengths in the question texts.
 
 
 ```python
@@ -392,7 +392,7 @@ plt.title('Distribution of question text length in characters')
     
 
 
-Even the distribution of question length in words and characters is very similar, looks like a good train test split so far
+Even the distribution of question length in words and characters is very similar, looks like a good train test split so far.
 
 ---
 <br>
@@ -464,14 +464,14 @@ print(tokenizer.convert_tokens_to_ids(tokenizer.wordpiece_tokenizer.tokenize(inp
 
 Each line of the dataset is composed of the review text and its label.
 Data preprocessing consists of transforming text to BERT input features:
-input_word_ids, input_mask, segment_ids/input_type_ids
+`input_word_ids`, `input_mask`, `segment_ids/input_type_ids`
 
-- **Input Word Ids:** Output of out tokenizer, converitng each sentence into set of token ids.
+- **Input Word Ids:** Output of our tokenizer, converting each sentence into set of token ids.
 
-- **Input Masks:** Since we are padding all the sequences to 128(max sequence length) , its important that we create some sort of a mask to make sure those paddings do not interfere therefore we need a generate input mask blocking the paddings, The mask has 1 for real tokens and 0 for padding tokens. Only real
+- **Input Masks:** Since we are padding all the sequences to 128(max sequence length), it is important that we create some sort of a mask to make sure those paddings do not interfere with the actual text tokens. Therefore we need a generate input mask blocking the paddings, The mask has 1 for real tokens and 0 for padding tokens. Only real
 tokens are attended to.
 
-- **Segment Ids:** For out task of text classification, Since there is only one sequence, the segment_ids/input_type_ids is basically just a vector of 0s 
+- **Segment Ids:** For out task of text classification, since there is only one sequence, the segment_ids/input_type_ids is basically just a vector of 0s. 
 
 
 
@@ -492,19 +492,19 @@ def create_feature(text, label, label_list=label_list, max_seq_length=max_seq_le
 
   Parameters:
     text: Input text string
-    lable: label associated with the text
+    label: label associated with the text
     label_list: (list) all possible labels
-    max_seq_length: (int) maximum sequence length set for bert
+    max_seq_length: (int) maximum sequence length set for BERT
     tokenizer: the tokenizer object instantiated by the files in model assets
 
   Returns:
     feature.input_ids: The token ids for the input text string
     feature.input_masks: The padding mask generated 
-    feature.segment_ids: essentially here a vector of 0s since classification
-    feature.label_id: the corresponding label id from lable_list [0, 1] here
+    feature.segment_ids: essentially here a vector of 0s as the task is classification
+    feature.label_id: the corresponding label id from label_list: [0, 1] 
 
   """
-  # since we only have 1 sentence for classification purpose, textr_b is None
+  # since we only have 1 sentence for classification purpose, text_b is None
   example = classifier_data_lib.InputExample(guid = None,
                                             text_a = text.numpy(), 
                                             text_b = None, 
@@ -620,10 +620,10 @@ valid_data.element_spec
 ## Create The Model
 
 There are two outputs from the BERT Layer: 
-- A pooled_output of shape [batch_size, 768] with representations for the entire input sequences  
+- A pooled_output of shape [batch_size, 768] with representations for the entire input sequences.  
 - A sequence_output of shape [batch_size, max_seq_length, 768] with representations for each input token (in context).
 
-For the classificaiton we are only concerned with the pooled_output
+For the classification we are only concerned with the pooled_output.
 
 
 ```python
@@ -792,7 +792,7 @@ Hopefully This was useful for you and by now you have a small kickstart on train
 
 You can check out and get the entire code in a form of notebook and also run it on colab from this [Github Repo](https://github.com/au1206/Fine_Tuning_BERT)
 
-If this was helpful consider sharing it with more people so thay can also learn about it...
+If this was helpful consider sharing it with more people so they can also learn about it...
 
 Coming up Next:
 - BERT Annotated Paper
