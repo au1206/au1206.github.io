@@ -5,7 +5,7 @@ classes: wide
 categories:
   - Annotated Paper
 tags:
-  - Transformers
+
 ---
 
 ## Attention Is All You Need ##

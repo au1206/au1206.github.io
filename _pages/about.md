@@ -26,7 +26,9 @@ Here are some ideas to get you started:
 
 - 📫 How to reach me [akshayuppal12@gmail.com](mailto:akshayuppal12@gmail.com)
 
-- 📄 Know about my experiences [https://www.linkedin.com/in/uppalakshay/](https://www.linkedin.com/in/uppalakshay/)<br>
+- 📄 Know about my experiences [https://www.linkedin.com/in/uppalakshay/](https://www.linkedin.com/in/uppalakshay/)
+
+- Hire me for Consultations on your ML problems, ML Industry Solutions, ML Tech Due Diligence at [CleverX](https://cleverx.com/@Akshay-U)<br>
 
 <h3 align="left">Connect with me:</h3>
 <img align='right' src='https://media.giphy.com/media/AFdcYElkoNAUE/giphy.gif' width='270'>

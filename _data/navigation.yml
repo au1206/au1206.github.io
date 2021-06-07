@@ -1,11 +1,11 @@
 main:
   - title: "Posts"
     url: /posts/
+  # - title: "Annotated Papers"
+  #   url: /annotated-papers/
   - title: "Categories"
     url: /categories/
   - title: "Tags"
     url: /tags/
   - title: "About Me"
     url: /about/
-  - title: "Contact"
-    url: /contact/

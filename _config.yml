@@ -61,7 +61,7 @@ plugins:
 author:
   name   : "Akshay Uppal"
   avatar : "/assets/images/bio-photo.png"
-  bio    : "A Machine Learning Engineer, working for a leading Intelligent Data Processing Startup. Passionate about ML, MLOps, ML Research"
+  bio    : "A Machine Learning Engineer, working for a leading Intelligent Data Processing Startup. Passionate about ML, MLOps, ML Research and making ML accessible for everyone"
   links:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
