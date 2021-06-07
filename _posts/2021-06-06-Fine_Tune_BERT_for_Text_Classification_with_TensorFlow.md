@@ -56,6 +56,8 @@ Cloning the Github Repo for tensorflow models
 
 **NOTE: ANYTHING BEFORE THIS CELL SHOULD ONLY BE RUN ONCE, ONLY DURING THE INITIAL SETUP**
 
+---
+
 ## Some Initial Imports and Checks
 
 
@@ -86,7 +88,7 @@ print("GPU is", "available" if tf.config.experimental.list_physical_devices("GPU
     GPU is available
 
 
-##Lets Get the Dataset
+## Lets Get the Dataset
 
 - The data we will use is the dataset provided on the [Quora Insincere Questions Classification competition on Kaggle](https://www.kaggle.com/c/quora-insincere-questions-classification/data). 
 
@@ -387,6 +389,9 @@ plt.title('Distribution of question text length in characters')
 
 Even the distribution of question length in words and characters is very similar, looks like a good train test split so far
 
+---
+<br>
+
 # Taming the Data
 
 
@@ -602,6 +607,8 @@ valid_data.element_spec
      TensorSpec(shape=(32,), dtype=tf.int32, name=None))
 
 
+---
+<br>
 
 # Lets Model Our Way to Glory!!!
 
@@ -727,7 +734,7 @@ history = model.fit(train_data,
     2040/2040 [==============================] - 1718s 842ms/step - loss: 0.0151 - binary_accuracy: 0.9948 - val_loss: 0.2421 - val_binary_accuracy: 0.9550
 
 
-### Lets Look at some Graphs
+## Lets Look at some Graphs
 
 These Graphs will mainly be useful when we are training for mroe epochs and more data
 
@@ -778,7 +785,7 @@ create_graphs(history)
 
 Hopefully This was useful for you and by now yuo have a small kickstart on training and utilizing BERT for downstream tasks like classification, Named Entity Recognition, Sentence filling and a lot more.
 
-You can check out and get the entire code in a form of notebook and also run it on colab from there on [Github Repo](https://github.com/au1206/Fine_Tuning_BERT)
+You can check out and get the entire code in a form of notebook and also run it on colab from there on this [Github Repo](https://github.com/au1206/Fine_Tuning_BERT)
 
 If this was helpful consider sharing it with more people so thay can also learn about it.
 
