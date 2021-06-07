@@ -17,7 +17,7 @@ We will be using Google Colab for this tutorial as we would require a GPU to fin
 
 ## Prerequisites:
 - Willingness to learn: Growth Mindset is all you need :smile:
-- Some basic idea about Tensorflow/Keras :thought_balloon:
+- Some basic idea about Tensorflow/Keras and BERT :thought_balloon:
 - Some Python to follow along with the code :man_technologist: :woman_technologist:<br>
 
 <div align="center">
@@ -353,7 +353,7 @@ plt.title('Distribution of question text length in words')
 
 ```python
 # TRAIN SET
-valid_df['question_text'].apply(lambda x: len(x)).plot(kind='hist');
+train_df['question_text'].apply(lambda x: len(x)).plot(kind='hist');
 plt.yscale('log');
 plt.title('Distribution of question text length in characters')
 ```
@@ -788,12 +788,12 @@ create_graphs(history)
 
 
 
-Hopefully This was useful for you and by now yuo have a small kickstart on training and utilizing BERT for downstream tasks like classification, Named Entity Recognition, Sentence filling and a lot more.
+Hopefully This was useful for you and by now you have a small kickstart on training and utilizing BERT for a variety of downstream tasks like classification, Named Entity Recognition, Sentence filling and many more.
 
-You can check out and get the entire code in a form of notebook and also run it on colab from there on this [Github Repo](https://github.com/au1206/Fine_Tuning_BERT)
+You can check out and get the entire code in a form of notebook and also run it on colab from this [Github Repo](https://github.com/au1206/Fine_Tuning_BERT)
 
-If this was helpful consider sharing it with more people so thay can also learn about it.
+If this was helpful consider sharing it with more people so thay can also learn about it...
 
-Coming up Soon:
+Coming up Next:
 - BERT Annotated Paper
 - Write up on Transformers and its workings 
