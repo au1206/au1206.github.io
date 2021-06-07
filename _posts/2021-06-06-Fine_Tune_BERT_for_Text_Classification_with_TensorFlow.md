@@ -15,6 +15,11 @@ tags:
 
 We will be using Google Colab for this tutorial as we would require a GPU to fine-tune BERT.
 
+## Prerequisites:
+- Willingness to learn: Growth Mindset is all you need :smile:
+- Some basic idea about Tensorflow/Keras :thought_balloon:
+- Some Python to follow along with the code :man_technologist: :woman_technologist:<br>
+
 <div align="center">
     <img width="512px" src='https://drive.google.com/uc?id=1mBqrfxng42SgSXvK62V1C67Or_vgrsVm' />
     <p style="text-align: center;color:gray">Figure 1: BERT Classification Model</p>
@@ -709,7 +714,7 @@ tf.keras.utils.plot_model(model=model, show_shapes=True, dpi=76, )
 
 
 The official tfhub page states that
-"All parameters in the module are trainable, and fine-tuning all parameters is the recommended practice." Therefore we will go ahead and train teh entire model without freezing anything
+"All parameters in the module are trainable, and fine-tuning all parameters is the recommended practice." Therefore we will go ahead and train the entire model without freezing anything.
 
 
 ```python
@@ -736,7 +741,7 @@ history = model.fit(train_data,
 
 ## Lets Look at some Graphs
 
-These Graphs will mainly be useful when we are training for mroe epochs and more data
+These Graphs will mainly be useful when we are training for more epochs and more data
 
 
 ```python
