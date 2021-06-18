@@ -422,7 +422,7 @@ with tf.device('/cpu:0'):
 
 ## Lets BERT: Get the Pre-trained BERT Model from TensorFlow Hub
 
-We will be using the uncased BERT present in the tfhub. In order to prepare the text to be given to the BERT layer, we need to first tokenize our words. The tokenizer here is present as a model asset and will do uncasing for us as well 
+We will be using the uncased BERT present in the tfhub. In order to prepare the text to be given to the BERT layer, we need to first tokenize our words. The tokenizer here is present as a model asset and will do uncasing for us as well.
 
 
 ```python
