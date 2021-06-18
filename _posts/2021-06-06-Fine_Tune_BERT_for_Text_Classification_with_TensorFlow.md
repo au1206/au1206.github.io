@@ -786,13 +786,14 @@ create_graphs(history)
     
 
 
+Hopefully this was useful for you, and by now you have a small kickstart on training and utilizing BERT for a variety of downstream tasks like classification, Named Entity Recognition, Sentence filling, and many more.
 
-Hopefully, this was useful for you, and by now, you have a small kickstart on training and utilizing BERT for a variety of downstream tasks like classification, Named Entity Recognition, Sentence filling, and many more.
-
-You can check out and get the entire code as a notebook and run it on colab from this [Github Repo](https://github.com/au1206/Fine_Tuning_BERT).
+You can check out and get the entire code as a notebook and run it on colab from this [Github Repo](https://github.com/au1206/Fine_Tuning_BERT) or on [Kaggle](https://www.kaggle.com/au1206/fine-tuning-bert-text-classification)
 
 If this was helpful, consider sharing it with more people so they can also learn about it.
 
 Coming up Next:
 - BERT Annotated Paper
 - Write up on Transformers and its workings 
+
+UPDATE: The BERT Annotation Paper is now Up! Go check it out [here](https://au1206.github.io/annotated%20paper/BERT/)
