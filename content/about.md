@@ -179,7 +179,7 @@ Machine Learning Engineer • Researcher • Technical Writer
 </p>
 
 <p class="hero-subtitle">
-Building intelligent systems at the intersection of Document AI, NLP, and Computer Vision. I demystify cutting-edge ML research through detailed paper annotations and practical tutorials, making advanced AI concepts accessible to engineers and researchers worldwide.
+Building intelligent systems at the intersection of Document AI, NLP, and Generative AI. Specializing in conversational interfaces and LLM-powered applications. I demystify cutting-edge ML research through detailed paper annotations and practical tutorials, making advanced AI concepts accessible to engineers and researchers worldwide.
 </p>
 
 <a href="https://cleverx.com/@Akshay-U" class="consulting-badge" target="_blank">
@@ -244,9 +244,15 @@ Building intelligent systems at the intersection of Document AI, NLP, and Comput
 </div>
 
 <div class="expertise-card">
-<div class="expertise-icon">👁️</div>
-<h4>Computer Vision</h4>
-<p>Image classification, object detection, and visual understanding using state-of-the-art deep learning architectures.</p>
+<div class="expertise-icon">💬</div>
+<h4>Conversational AI</h4>
+<p>Building intelligent chatbots, dialogue systems, and conversational interfaces using LLMs and advanced NLP techniques.</p>
+</div>
+
+<div class="expertise-card">
+<div class="expertise-icon">✨</div>
+<h4>Generative AI</h4>
+<p>Working with large language models, prompt engineering, RAG systems, and creating AI-powered content generation solutions.</p>
 </div>
 
 <div class="expertise-card">
@@ -259,12 +265,6 @@ Building intelligent systems at the intersection of Document AI, NLP, and Comput
 <div class="expertise-icon">🔬</div>
 <h4>Research & Education</h4>
 <p>Annotating cutting-edge papers, writing technical tutorials, and translating complex ML concepts into actionable insights.</p>
-</div>
-
-<div class="expertise-card">
-<div class="expertise-icon">🚀</div>
-<h4>Deep Learning</h4>
-<p>Neural networks, PyTorch, TensorFlow, and implementing research papers from scratch for practical use cases.</p>
 </div>
 </div>
 </div>
