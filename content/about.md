@@ -105,6 +105,26 @@ ShowBreadCrumbs: false
   gap: 20px;
   margin: 2rem 0;
 }
+
+.tech-stack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, max-content));
+  gap: 10px;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.tech-stack-grid a {
+  display: inline-block;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tech-stack-grid a:hover {
+  transform: translateY(-3px) scale(1.05);
+  filter: brightness(1.1);
+}
 </style>
 
 <div class="hero-section">
@@ -139,23 +159,14 @@ Specializing in Document AI, NLP, and Computer Vision. Passionate about annotati
 
 <h3 class="section-title">🛠️ Tech Stack</h3>
 
-<p class="category-title">ML & AI Frameworks</p>
-<div class="badge-container">
+<div class="tech-stack-grid">
 <a href="https://www.python.org"><img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/></a>
 <a href="https://pytorch.org"><img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch"/></a>
 <a href="https://www.tensorflow.org"><img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" alt="TensorFlow"/></a>
 <a href="https://huggingface.co"><img src="https://img.shields.io/badge/HuggingFace-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black" alt="HuggingFace"/></a>
 <a href="https://scikit-learn.org"><img src="https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Scikit-learn"/></a>
-</div>
-
-<p class="category-title">Backend & API Development</p>
-<div class="badge-container">
 <a href="https://fastapi.tiangolo.com"><img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI"/></a>
 <a href="https://flask.palletsprojects.com"><img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask"/></a>
-</div>
-
-<p class="category-title">Tools & DevOps</p>
-<div class="badge-container">
 <a href="https://git-scm.com"><img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git"/></a>
 <a href="https://postman.com"><img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="Postman"/></a>
 </div>
