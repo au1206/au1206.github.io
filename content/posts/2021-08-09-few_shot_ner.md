@@ -36,7 +36,7 @@ Follow me on Github and star this repo for regular updates. [GitHub](https://git
 
 
 <br>
-CITATION
+## Citation
 ```
 @misc{huang2020fewshot,
       title={Few-Shot Named Entity Recognition: A Comprehensive Study}, 

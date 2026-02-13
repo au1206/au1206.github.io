@@ -24,7 +24,7 @@ Please feel free to read along the paper with my notes and highlights.
 
 <br>
 
-CITATION
+## Citation
 ```
 @misc{vaswani2017attention,
       title={Attention Is All You Need}, 
