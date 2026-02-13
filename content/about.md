@@ -101,9 +101,21 @@ ShowBreadCrumbs: false
 
 .expertise-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   margin: 0 auto;
+}
+
+@media (max-width: 968px) {
+  .expertise-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .expertise-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .expertise-card {
@@ -262,9 +274,9 @@ Building intelligent systems at the intersection of Document AI, NLP, and Genera
 </div>
 
 <div class="expertise-card">
-<div class="expertise-icon">🔬</div>
-<h4>Research & Education</h4>
-<p>Annotating cutting-edge papers, writing technical tutorials, and translating complex ML concepts into actionable insights.</p>
+<div class="expertise-icon">📊</div>
+<h4>LLM Evaluation</h4>
+<p>Comprehensive evaluation frameworks for large language models, including performance metrics, bias detection, and quality assessment.</p>
 </div>
 </div>
 </div>
