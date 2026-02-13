@@ -37,7 +37,7 @@ Also, Follow me on [Twitter](https://twitter.com/akshayuppal12).
 
 <br>
 ## Citation
-```
+```bibtex
 @misc{wu2021fastformer,
       title={WebFormer: The Web-page Transformer for Structure Information Extraction}, 
       author={Qifan Wang and Yi Fang and Anirudh Ravula and Fuli Feng and Xiaojun Quan and Dongfang Liu},

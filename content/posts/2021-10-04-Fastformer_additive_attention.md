@@ -38,7 +38,7 @@ Also, Follow me on [Twitter](https://twitter.com/akshayuppal12).
 
 <br>
 ## Citation
-```
+```bibtex
 @misc{wu2021fastformer,
       title={Fastformer: Additive Attention Can Be All You Need}, 
       author={Chuhan Wu and Fangzhao Wu and Tao Qi and Yongfeng Huang and Xing Xie},

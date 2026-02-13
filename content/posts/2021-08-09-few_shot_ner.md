@@ -37,7 +37,7 @@ Follow me on Github and star this repo for regular updates. [GitHub](https://git
 
 <br>
 ## Citation
-```
+```bibtex
 @misc{huang2020fewshot,
       title={Few-Shot Named Entity Recognition: A Comprehensive Study}, 
       author={Jiaxin Huang and Chunyuan Li and Krishan Subudhi and Damien Jose and Shobana Balakrishnan and Weizhu Chen and Baolin Peng and Jianfeng Gao and Jiawei Han},
