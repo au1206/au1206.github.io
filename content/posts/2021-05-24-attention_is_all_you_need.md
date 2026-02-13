@@ -22,8 +22,6 @@ Please feel free to read along the paper with my notes and highlights.
 
 <embed src="/pdfs/attention_is_all_you_need.pdf" width="1000px" height="2100px" />
 
-<br>
-
 ## Citation
 ```bibtex
 @misc{vaswani2017attention,

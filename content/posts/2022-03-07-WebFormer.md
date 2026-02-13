@@ -35,7 +35,6 @@ Also, Follow me on [Twitter](https://twitter.com/akshayuppal12).
 
 **PS:** For now, the PDF Above does not render properly on mobile devices, so please download the pdf from the above button or get it from my [Github](https://github.com/au1206/paper_annotations)
 
-<br>
 ## Citation
 ```bibtex
 @misc{wu2021fastformer,
