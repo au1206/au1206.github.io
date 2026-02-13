@@ -12,17 +12,28 @@ ShowBreadCrumbs: false
 }
 
 .hero-section h2 {
-  font-size: 1.8rem;
-  margin: 1.5rem 0 1rem 0;
-  font-weight: 600;
+  font-size: 2.5rem;
+  margin: 1.5rem 0 0.5rem 0;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-tagline {
+  font-size: 1.2rem;
+  color: #aaa;
+  margin: 0.5rem auto 1.5rem;
+  font-weight: 500;
 }
 
 .hero-subtitle {
   font-size: 1.1rem;
   color: #888;
-  line-height: 1.6;
-  max-width: 700px;
-  margin: 0 auto 1rem;
+  line-height: 1.8;
+  max-width: 750px;
+  margin: 0 auto 1.5rem;
 }
 
 .consulting-badge {
@@ -83,19 +94,49 @@ ShowBreadCrumbs: false
   transform: translateY(-3px);
 }
 
-.specializations {
-  text-align: center;
-  padding: 1.5rem;
-  background: rgba(102, 126, 234, 0.1);
-  border-radius: 10px;
-  margin: 2rem auto;
-  max-width: 800px;
+.expertise-section {
+  margin: 3rem auto;
+  max-width: 1200px;
 }
 
-.specializations p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  margin: 0;
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 0 auto;
+}
+
+.expertise-card {
+  background: rgba(102, 126, 234, 0.05);
+  border: 1px solid rgba(102, 126, 234, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.expertise-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.2);
+  background: rgba(102, 126, 234, 0.1);
+}
+
+.expertise-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.expertise-card h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+  color: #667eea;
+}
+
+.expertise-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #888;
+  margin: 0.5rem 0 0 0;
 }
 
 .stats-container {
@@ -131,14 +172,18 @@ ShowBreadCrumbs: false
 
 ![Header image](/images/Header.png)
 
-## Machine Learning Engineer | ML Research | Making ML Accessible
+## Akshay Uppal
+
+<p class="hero-tagline">
+Machine Learning Engineer • Researcher • Technical Writer
+</p>
 
 <p class="hero-subtitle">
-Specializing in Document AI, NLP, and Computer Vision. Passionate about annotating research papers and sharing knowledge through tutorials and technical articles.
+Building intelligent systems at the intersection of Document AI, NLP, and Computer Vision. I demystify cutting-edge ML research through detailed paper annotations and practical tutorials, making advanced AI concepts accessible to engineers and researchers worldwide.
 </p>
 
 <a href="https://cleverx.com/@Akshay-U" class="consulting-badge" target="_blank">
-💼 Available for ML Consulting
+💼 Available for Consulting
 </a>
 
 </div>
@@ -182,10 +227,44 @@ Specializing in Document AI, NLP, and Computer Vision. Passionate about annotati
 
 <hr class="section-divider">
 
-<div class="specializations">
-<h3 style="margin-top: 0;">🎯 Areas of Expertise</h3>
-<p>
-<strong>Document AI</strong> • <strong>Natural Language Processing</strong> • <strong>Computer Vision</strong><br>
-<strong>Deep Learning</strong> • <strong>ML Research</strong> • <strong>ML Engineering</strong>
-</p>
+<div class="expertise-section">
+<h3 class="section-title" style="margin-bottom: 2rem;">🎯 Areas of Expertise</h3>
+
+<div class="expertise-grid">
+<div class="expertise-card">
+<div class="expertise-icon">📄</div>
+<h4>Document AI</h4>
+<p>Intelligent document processing, layout analysis, and information extraction from structured and unstructured documents.</p>
+</div>
+
+<div class="expertise-card">
+<div class="expertise-icon">🧠</div>
+<h4>Natural Language Processing</h4>
+<p>Advanced NLP techniques, transformers, language models, and text understanding systems for real-world applications.</p>
+</div>
+
+<div class="expertise-card">
+<div class="expertise-icon">👁️</div>
+<h4>Computer Vision</h4>
+<p>Image classification, object detection, and visual understanding using state-of-the-art deep learning architectures.</p>
+</div>
+
+<div class="expertise-card">
+<div class="expertise-icon">⚡</div>
+<h4>ML Engineering</h4>
+<p>Production ML systems, model deployment, API development, and scalable ML infrastructure using FastAPI and modern tools.</p>
+</div>
+
+<div class="expertise-card">
+<div class="expertise-icon">🔬</div>
+<h4>Research & Education</h4>
+<p>Annotating cutting-edge papers, writing technical tutorials, and translating complex ML concepts into actionable insights.</p>
+</div>
+
+<div class="expertise-card">
+<div class="expertise-icon">🚀</div>
+<h4>Deep Learning</h4>
+<p>Neural networks, PyTorch, TensorFlow, and implementing research papers from scratch for practical use cases.</p>
+</div>
+</div>
 </div>
