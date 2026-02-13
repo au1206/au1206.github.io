@@ -32,7 +32,7 @@ ShowBreadCrumbs: false
   font-size: 1.1rem;
   color: #888;
   line-height: 1.8;
-  max-width: 750px;
+  max-width: 900px;
   margin: 0 auto 1.5rem;
 }
 
@@ -83,6 +83,10 @@ ShowBreadCrumbs: false
   justify-content: center;
   gap: 8px;
   margin-bottom: 1rem;
+  padding: 0 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .badge-container a {
@@ -96,7 +100,8 @@ ShowBreadCrumbs: false
 
 .expertise-section {
   margin: 3rem auto;
-  max-width: 1200px;
+  max-width: 1400px;
+  padding: 0 2rem;
 }
 
 .expertise-grid {
@@ -156,7 +161,9 @@ ShowBreadCrumbs: false
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  margin: 2rem 0;
+  margin: 2rem auto;
+  padding: 0 2rem;
+  max-width: 1200px;
 }
 
 .tech-stack-grid {
@@ -164,9 +171,9 @@ ShowBreadCrumbs: false
   grid-template-columns: repeat(auto-fit, minmax(120px, max-content));
   gap: 10px;
   justify-content: center;
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 1rem 2rem;
 }
 
 .tech-stack-grid a {
