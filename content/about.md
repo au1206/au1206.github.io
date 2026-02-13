@@ -11,12 +11,38 @@ ShowBreadCrumbs: false
   padding: 2rem 0;
 }
 
+.hero-header {
+  max-width: 1400px;
+  margin: 2rem auto 1.5rem;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.hero-header h2 {
+  font-size: 2.8rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: center;
+}
+
+.hero-tagline {
+  font-size: 1.3rem;
+  color: #aaa;
+  margin: 0.5rem 0 0;
+  font-weight: 500;
+  text-align: center;
+}
+
 .hero-columns {
   display: flex;
   align-items: center;
   gap: 3rem;
   max-width: 1400px;
-  margin: 2rem auto;
+  margin: 0 auto;
   padding: 0 2rem;
 }
 
@@ -30,25 +56,6 @@ ShowBreadCrumbs: false
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.hero-section h2 {
-  font-size: 2.5rem;
-  margin: 0 0 0.5rem 0;
-  font-weight: 700;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-align: left;
-}
-
-.hero-tagline {
-  font-size: 1.2rem;
-  color: #aaa;
-  margin: 0.5rem 0 1.5rem;
-  font-weight: 500;
-  text-align: left;
 }
 
 .hero-subtitle {
@@ -225,6 +232,14 @@ ShowBreadCrumbs: false
 }
 
 @media (max-width: 968px) {
+  .hero-header h2 {
+    font-size: 2.2rem;
+  }
+
+  .hero-tagline {
+    font-size: 1.1rem;
+  }
+
   .hero-columns {
     flex-direction: column;
     text-align: center;
@@ -234,14 +249,13 @@ ShowBreadCrumbs: false
     text-align: center;
   }
 
-  .hero-section h2,
-  .hero-tagline,
   .hero-subtitle {
     text-align: center;
   }
 
   .hero-image {
     flex: 0 0 auto;
+    margin-top: 1rem;
   }
 
   .pikachu-gif {
@@ -254,14 +268,15 @@ ShowBreadCrumbs: false
 
 ![Header image](/images/Header.png)
 
-<div class="hero-columns">
-<div class="hero-text">
-
-## Akshay Uppal
-
+<div class="hero-header">
+<h2>Akshay Uppal</h2>
 <p class="hero-tagline">
 Machine Learning Engineer • Researcher • Technical Writer
 </p>
+</div>
+
+<div class="hero-columns">
+<div class="hero-text">
 
 <p class="hero-subtitle">
 Building intelligent systems at the intersection of Document AI, NLP, and Generative AI. Specializing in conversational interfaces and LLM-powered applications. I demystify cutting-edge ML research through detailed paper annotations and practical tutorials, making advanced AI concepts accessible to engineers and researchers worldwide.
