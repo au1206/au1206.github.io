@@ -66,23 +66,6 @@ ShowBreadCrumbs: false
   text-align: left;
 }
 
-.consulting-badge {
-  display: inline-block;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  padding: 0.5rem 1.5rem;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: 500;
-  margin: 1rem 0;
-  transition: transform 0.2s;
-}
-
-.consulting-badge:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
-
 .section-divider {
   margin: 3rem 0;
   border: none;
@@ -281,10 +264,6 @@ Machine Learning Engineer • Researcher • Technical Writer
 <p class="hero-subtitle">
 Building intelligent systems at the intersection of Document AI, NLP, and Generative AI. Specializing in conversational interfaces and LLM-powered applications. I demystify cutting-edge ML research through detailed paper annotations and practical tutorials, making advanced AI concepts accessible to engineers and researchers worldwide.
 </p>
-
-<a href="https://cleverx.com/@Akshay-U" class="consulting-badge" target="_blank">
-💼 Available for Consulting
-</a>
 
 </div>
 
