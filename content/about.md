@@ -243,18 +243,6 @@ Building intelligent systems at the intersection of Document AI, NLP, and Genera
 
 <div class="expertise-grid">
 <div class="expertise-card">
-<div class="expertise-icon">📄</div>
-<h4>Document AI</h4>
-<p>Intelligent document processing, layout analysis, and information extraction from structured and unstructured documents.</p>
-</div>
-
-<div class="expertise-card">
-<div class="expertise-icon">🧠</div>
-<h4>Natural Language Processing</h4>
-<p>Advanced NLP techniques, transformers, language models, and text understanding systems for real-world applications.</p>
-</div>
-
-<div class="expertise-card">
 <div class="expertise-icon">💬</div>
 <h4>Conversational AI</h4>
 <p>Building intelligent chatbots, dialogue systems, and conversational interfaces using LLMs and advanced NLP techniques.</p>
@@ -276,6 +264,18 @@ Building intelligent systems at the intersection of Document AI, NLP, and Genera
 <div class="expertise-icon">📊</div>
 <h4>LLM Evaluation</h4>
 <p>Comprehensive evaluation frameworks for large language models, including performance metrics, bias detection, and quality assessment.</p>
+</div>
+
+<div class="expertise-card">
+<div class="expertise-icon">📄</div>
+<h4>Document AI</h4>
+<p>Intelligent document processing, layout analysis, and information extraction from structured and unstructured documents.</p>
+</div>
+
+<div class="expertise-card">
+<div class="expertise-icon">🧠</div>
+<h4>Natural Language Processing</h4>
+<p>Advanced NLP techniques, transformers, language models, and text understanding systems for real-world applications.</p>
 </div>
 </div>
 </div>
