@@ -11,29 +11,52 @@ ShowBreadCrumbs: false
   padding: 2rem 0;
 }
 
+.hero-columns {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+.hero-text {
+  flex: 1;
+  text-align: left;
+}
+
+.hero-image {
+  flex: 0 0 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .hero-section h2 {
   font-size: 2.5rem;
-  margin: 1.5rem 0 0.5rem 0;
+  margin: 0 0 0.5rem 0;
   font-weight: 700;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  text-align: left;
 }
 
 .hero-tagline {
   font-size: 1.2rem;
   color: #aaa;
-  margin: 0.5rem auto 1.5rem;
+  margin: 0.5rem 0 1.5rem;
   font-weight: 500;
+  text-align: left;
 }
 
 .hero-subtitle {
   font-size: 1.1rem;
   color: #888;
   line-height: 1.8;
-  max-width: 900px;
-  margin: 0 auto 1.5rem;
+  margin: 0 0 1.5rem;
+  text-align: left;
 }
 
 .consulting-badge {
@@ -187,6 +210,8 @@ ShowBreadCrumbs: false
 }
 
 .pikachu-gif {
+  width: 270px;
+  height: auto;
   animation: float 3s ease-in-out infinite;
 }
 
@@ -195,18 +220,32 @@ ShowBreadCrumbs: false
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-15px);
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 968px) {
+  .hero-columns {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-section h2,
+  .hero-tagline,
+  .hero-subtitle {
+    text-align: center;
+  }
+
+  .hero-image {
+    flex: 0 0 auto;
+  }
+
   .pikachu-gif {
-    position: relative !important;
-    right: auto !important;
-    top: auto !important;
-    width: 150px !important;
-    display: block;
-    margin: 0 auto 1rem;
+    width: 200px;
   }
 }
 </style>
@@ -215,8 +254,8 @@ ShowBreadCrumbs: false
 
 ![Header image](/images/Header.png)
 
-<div style="position: relative;">
-<img src="https://media.giphy.com/media/AFdcYElkoNAUE/giphy.gif" alt="Pikachu" style="position: absolute; right: 0; top: -50px; width: 200px; z-index: 10;" class="pikachu-gif"/>
+<div class="hero-columns">
+<div class="hero-text">
 
 ## Akshay Uppal
 
@@ -231,6 +270,12 @@ Building intelligent systems at the intersection of Document AI, NLP, and Genera
 <a href="https://cleverx.com/@Akshay-U" class="consulting-badge" target="_blank">
 💼 Available for Consulting
 </a>
+
+</div>
+
+<div class="hero-image">
+<img src="https://media.giphy.com/media/AFdcYElkoNAUE/giphy.gif" alt="Pikachu" class="pikachu-gif"/>
+</div>
 
 </div>
 
