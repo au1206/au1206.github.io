@@ -185,11 +185,38 @@ ShowBreadCrumbs: false
   transform: translateY(-3px) scale(1.05);
   filter: brightness(1.1);
 }
+
+.pikachu-gif {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .pikachu-gif {
+    position: relative !important;
+    right: auto !important;
+    top: auto !important;
+    width: 150px !important;
+    display: block;
+    margin: 0 auto 1rem;
+  }
+}
 </style>
 
 <div class="hero-section">
 
 ![Header image](/images/Header.png)
+
+<div style="position: relative;">
+<img src="https://media.giphy.com/media/AFdcYElkoNAUE/giphy.gif" alt="Pikachu" style="position: absolute; right: 0; top: -50px; width: 200px; z-index: 10;" class="pikachu-gif"/>
 
 ## Akshay Uppal
 
@@ -204,6 +231,8 @@ Building intelligent systems at the intersection of Document AI, NLP, and Genera
 <a href="https://cleverx.com/@Akshay-U" class="consulting-badge" target="_blank">
 💼 Available for Consulting
 </a>
+
+</div>
 
 </div>
 
