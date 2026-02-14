@@ -169,16 +169,6 @@ ShowBreadCrumbs: false
   margin: 0.4rem 0 0 0;
 }
 
-.stats-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  margin: 2rem auto;
-  padding: 0 2rem;
-  max-width: 1200px;
-}
-
 .tech-stack-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, max-content));
@@ -347,11 +337,3 @@ Building intelligent systems at the intersection of Document AI, NLP, and Genera
 <a href="https://kaggle.com/au1206"><img src="https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=Kaggle&logoColor=white" alt="Kaggle"/></a>
 </div>
 
-<hr class="section-divider">
-
-<h3 class="section-title">📊 GitHub Stats</h3>
-
-<div class="stats-container">
-<img src="https://github-readme-stats.vercel.app/api/top-langs?username=akshayuppal&show_icons=true&theme=tokyonight&layout=compact&hide_border=true" alt="Top Languages" width="400"/>
-<img src="https://github-readme-stats.vercel.app/api?username=akshayuppal&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub Stats" width="400"/>
-</div>

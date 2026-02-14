@@ -1,0 +1,55 @@
+<style>
+.donation-banner {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  text-align: center;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.donation-banner-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.donation-banner .heart-icon {
+  font-size: 1.1rem;
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+.donation-banner strong {
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .donation-banner {
+    font-size: 0.85rem;
+    padding: 0.6rem 0.8rem;
+  }
+}
+</style>
+
+<div class="donation-banner">
+  <div class="donation-banner-content">
+    <span class="heart-icon">💙</span>
+    <span><strong>Making a Difference:</strong> All ad revenue from this site supports educational opportunities for underprivileged communities.</span>
+    <span class="heart-icon">📚</span>
+  </div>
+</div>
