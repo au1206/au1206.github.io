@@ -37,6 +37,20 @@ When BLEU was introduced in 2002, it was revolutionary. When perplexity became t
 
 **The problem?** Modern LLMs broke all these assumptions.
 
+```mermaid
+graph LR
+    A[2002-2015:<br/>Traditional Metrics] --> B[BLEU<br/>ROUGE<br/>Perplexity]
+    B --> C[Worked for:<br/>• MT Systems<br/>• Deterministic Output<br/>• Narrow Tasks]
+    D[2020-2026:<br/>Modern LLMs] --> E[Need New Metrics]
+    E --> F[Faithfulness<br/>Informativeness<br/>Context Relevance]
+    F --> G[Work for:<br/>• General AI<br/>• Probabilistic Output<br/>• Complex Tasks]
+
+    style A fill:#ff6b6b
+    style D fill:#51cf66
+    style B fill:#ffd43b
+    style F fill:#339af0
+```
+
 ### Why BLEU, ROUGE, and Perplexity Fall Short
 
 Let me show you a concrete example. Here are three model outputs for the same question:
@@ -81,11 +95,39 @@ This is huge. It means:
 
 Think about it: When was the last time you said "This LLM response is grammatically incorrect"? You didn't. You said "This is hallucinated" or "This doesn't answer my question."
 
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2rem; border-radius: 12px; color: white; margin: 2rem 0;">
+<h3 style="color: white; margin-top: 0;">💡 Key Insight from 2026 Research</h3>
+<p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 0;">
+Analysis of <strong>243,337 manual annotations</strong> across GPT-4, Claude, and ChatGPT revealed:<br/>
+<strong style="font-size: 1.2rem;">Fluency is no longer a differentiator.</strong><br/>
+Modern LLMs compete on <strong>informativeness</strong> and <strong>accuracy</strong>, not grammar.
+</p>
+</div>
+
 ---
 
 ## Part 2: What Actually Matters in 2026
 
 Based on production experience and recent research, here are the metrics that actually predict LLM success:
+
+```mermaid
+graph TD
+    A[Modern LLM Evaluation] --> B[1. Faithfulness<br/>Anti-Hallucination]
+    A --> C[2. Informativeness<br/>Value Metric]
+    A --> D[3. Context Relevance<br/>Retrieval Quality]
+    A --> E[4. Answer Accuracy<br/>Ground Truth]
+
+    B --> F[Does output match<br/>source context?]
+    C --> G[How much useful<br/>info is conveyed?]
+    D --> H[Are retrieved docs<br/>relevant?]
+    E --> I[Is the answer<br/>factually correct?]
+
+    style A fill:#667eea,color:#fff
+    style B fill:#51cf66
+    style C fill:#339af0
+    style D fill:#ff6b6b
+    style E fill:#ffd43b
+```
 
 ### 1. Faithfulness (The Anti-Hallucination Metric)
 
@@ -237,6 +279,56 @@ You've decided to evaluate properly. Now you need tools. Here's how the top 3 fr
 | Enterprise testing | **DeepEval** | CI/CD integration, custom metrics, comprehensive |
 | LangChain workflows | **LangSmith** | Native integration, observability built-in |
 | Multi-framework strategy | **All three** | DeepEval for testing, LangSmith for monitoring, Ragas for quick checks |
+
+```mermaid
+graph TB
+    subgraph DeepEval
+        D1[Comprehensive Testing]
+        D2[14+ RAG Metrics]
+        D3[CI/CD Ready]
+        D4[Custom Metrics]
+        D5[Like Pytest]
+    end
+
+    subgraph Ragas
+        R1[RAG-Focused]
+        R2[Lightweight]
+        R3[Quick Setup]
+        R4[Domain-Specific]
+        R5[Like Pandas]
+    end
+
+    subgraph LangSmith
+        L1[Observability]
+        L2[LangChain Native]
+        L3[Hosted Platform]
+        L4[Tracing Built-in]
+        L5[Enterprise Ready]
+    end
+
+    USE[Your Use Case] --> Q1{Need CI/CD<br/>Integration?}
+    Q1 -->|Yes| D1
+    Q1 -->|No| Q2{Using<br/>LangChain?}
+    Q2 -->|Yes| L1
+    Q2 -->|No| Q3{Quick<br/>Experiment?}
+    Q3 -->|Yes| R1
+    Q3 -->|No| D1
+
+    style DeepEval fill:#51cf66
+    style Ragas fill:#339af0
+    style LangSmith fill:#ffd43b
+    style USE fill:#667eea,color:#fff
+```
+
+<div style="background: #f8f9fa; border-left: 4px solid #667eea; padding: 1.5rem; margin: 2rem 0;">
+<h4 style="margin-top: 0; color: #667eea;">🎯 Framework Selection Guide</h4>
+<ul style="margin-bottom: 0;">
+<li><strong>Starting out?</strong> → Ragas (easiest setup)</li>
+<li><strong>Production system?</strong> → DeepEval (most comprehensive)</li>
+<li><strong>Already using LangChain?</strong> → LangSmith (native integration)</li>
+<li><strong>Enterprise with CI/CD?</strong> → DeepEval + LangSmith (best of both)</li>
+</ul>
+</div>
 
 ### DeepEval: The "Pytest for LLMs"
 
@@ -605,16 +697,56 @@ Setting up evaluation is great for development. But production is different. You
 
 ### The Critical Distinction
 
-**Evaluation**: Measures output quality against predefined goals
-- "Is this response faithful?"
-- "What's the hallucination rate on my test set?"
-- **When**: Development, testing, before deployment
+```mermaid
+graph LR
+    subgraph Evaluation
+        E1[Pre-Production]
+        E2[Test Sets]
+        E3[Metrics:<br/>Faithfulness<br/>Relevancy<br/>Accuracy]
+        E4[Questions:<br/>Is it good enough?<br/>What's the score?]
+    end
 
-**Observability**: Tracks system behavior over time in production
-- "Why did latency spike at 2am?"
-- "Which prompt version caused the cost increase?"
-- "When did hallucination rate start increasing?"
-- **When**: Production, post-deployment, continuous monitoring
+    subgraph Observability
+        O1[Production]
+        O2[Live Traffic]
+        O3[Monitoring:<br/>Latency<br/>Cost<br/>Quality Drift]
+        O4[Questions:<br/>Why did it fail?<br/>When did it degrade?]
+    end
+
+    DEV[Development] --> E1
+    E1 --> DEPLOY{Deploy?}
+    DEPLOY -->|Pass| O1
+    DEPLOY -->|Fail| E1
+    O1 --> FEEDBACK[Feedback Loop]
+    FEEDBACK --> E1
+
+    style Evaluation fill:#51cf66
+    style Observability fill:#339af0
+    style DEPLOY fill:#ffd43b
+```
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0;">
+<div style="background: #d3f9d8; padding: 1.5rem; border-radius: 8px;">
+<h4 style="color: #2b8a3e; margin-top: 0;">📊 Evaluation</h4>
+<p><strong>Purpose:</strong> Measure quality before deployment</p>
+<ul>
+<li>Test sets with ground truth</li>
+<li>Offline metrics</li>
+<li>Pre-production phase</li>
+<li>Question: "Is it good enough?"</li>
+</ul>
+</div>
+<div style="background: #d0ebff; padding: 1.5rem; border-radius: 8px;">
+<h4 style="color: #1864ab; margin-top: 0;">🔍 Observability</h4>
+<p><strong>Purpose:</strong> Monitor behavior in production</p>
+<ul>
+<li>Live user traffic</li>
+<li>Real-time metrics</li>
+<li>Post-deployment phase</li>
+<li>Question: "Why did it fail?"</li>
+</ul>
+</div>
+</div>
 
 ### The Silent Failure Problem
 
@@ -640,6 +772,35 @@ result = answer_question("What is 2+2?")
 This is why you need observability - to catch these silent failures.
 
 ### Production Observability Stack
+
+```mermaid
+graph TD
+    USER[User Query] --> API[LLM API]
+    API --> TRACE[Tracing Layer<br/>LangSmith/Braintrust]
+    TRACE --> RETRIEVE[Retrieval]
+    RETRIEVE --> GENERATE[Generation]
+    GENERATE --> EVAL[Async Evaluation<br/>DeepEval/Ragas]
+
+    TRACE --> METRICS[Metrics Collection]
+    METRICS --> LAT[Latency Tracking]
+    METRICS --> COST[Cost Monitoring]
+    METRICS --> QUAL[Quality Scoring]
+
+    LAT --> ALERT{Alert<br/>Threshold?}
+    COST --> ALERT
+    QUAL --> ALERT
+
+    ALERT -->|Exceeded| NOTIFY[Notify Team]
+    ALERT -->|Normal| LOG[Log to Dashboard]
+
+    EVAL --> FEED[Feedback Loop]
+    FEED --> IMPROVE[Model Improvement]
+
+    style USER fill:#667eea,color:#fff
+    style ALERT fill:#ff6b6b,color:#fff
+    style NOTIFY fill:#fa5252,color:#fff
+    style IMPROVE fill:#51cf66
+```
 
 Here's what a production-ready stack looks like:
 
@@ -908,11 +1069,81 @@ After implementing these changes:
 | User Satisfaction | 67% | 94% | +40% ✓ |
 | False Confidence | 31% | 4% | -87% ✓ |
 
-**Key Lesson**: Traditional metrics showed no problem. Modern evaluation metrics (faithfulness, hallucination) revealed the critical issues.
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#667eea'}}}%%
+graph LR
+    subgraph Before
+        B1[Hallucination: 23%]
+        B2[Faithfulness: 0.54]
+        B3[User Sat: 67%]
+    end
+
+    subgraph Improvements
+        I1[Hybrid Search]
+        I2[Constrained Prompts]
+        I3[Post-Gen Verification]
+    end
+
+    subgraph After
+        A1[Hallucination: 3.2%]
+        A2[Faithfulness: 0.91]
+        A3[User Sat: 94%]
+    end
+
+    Before --> Improvements
+    Improvements --> After
+
+    style Before fill:#ff6b6b
+    style After fill:#51cf66
+    style Improvements fill:#339af0
+```
+
+<div style="background: linear-gradient(135deg, #51cf66 0%, #37b24d 100%); padding: 2rem; border-radius: 12px; color: white; margin: 2rem 0; text-align: center;">
+<h3 style="color: white; margin-top: 0; font-size: 2rem;">📈 86% Reduction in Hallucinations</h3>
+<p style="font-size: 1.2rem; margin: 1rem 0;">
+From 23% to 3.2% hallucination rate<br/>
+User satisfaction jumped from 67% to 94%
+</p>
+<p style="font-size: 1rem; opacity: 0.9; margin-bottom: 0;">
+<strong>Key Lesson:</strong> Traditional metrics (BLEU, ROUGE) showed no problem.<br/>
+Modern evaluation metrics (faithfulness, hallucination) revealed the critical issues.
+</p>
+</div>
 
 ---
 
 ## Part 7: Best Practices and Common Pitfalls
+
+```mermaid
+graph TD
+    START[Start Evaluation] --> Q1{Have<br/>test data?}
+    Q1 -->|No| CREATE[Create test set<br/>from prod queries]
+    Q1 -->|Yes| Q2{Production<br/>system?}
+
+    Q2 -->|No| DEV[Use DeepEval<br/>for development]
+    Q2 -->|Yes| Q3{Need<br/>observability?}
+
+    Q3 -->|Yes| OBS[Add LangSmith<br/>+ monitoring]
+    Q3 -->|No| EVAL[Run periodic<br/>evaluations]
+
+    CREATE --> Q2
+    DEV --> Q4{Ready for<br/>production?}
+    Q4 -->|Yes| OBS
+    Q4 -->|No| ITERATE[Iterate & improve]
+    ITERATE --> DEV
+
+    OBS --> MONITOR[Continuous<br/>monitoring]
+    EVAL --> MONITOR
+    MONITOR --> ALERT{Quality<br/>degradation?}
+    ALERT -->|Yes| DEBUG[Debug & fix]
+    ALERT -->|No| GOOD[All good!]
+    DEBUG --> MONITOR
+
+    style START fill:#667eea,color:#fff
+    style GOOD fill:#51cf66
+    style ALERT fill:#ffd43b
+    style DEBUG fill:#ff6b6b,color:#fff
+```
 
 ### ✅ Best Practices
 
@@ -1043,20 +1274,58 @@ def get_threshold(query_type):
 
 We've covered a lot of ground. Here's your action plan:
 
-### This Week
-1. **Install DeepEval**: `pip install deepeval`
-2. **Write 3 test cases** for your most critical LLM use cases
-3. **Run evaluation** and note where traditional metrics differ from faithfulness/relevancy
+```mermaid
+gantt
+    title Your LLM Evaluation Roadmap
+    dateFormat X
+    axisFormat %s
 
-### This Month
-1. **Set up CI/CD evaluation** to catch regressions
-2. **Implement production monitoring** with LangSmith or Braintrust
-3. **Create alerts** for quality degradation and cost spikes
+    section This Week
+    Install DeepEval           :0, 1
+    Write 3 test cases        :1, 2
+    Run first evaluation      :2, 1
 
-### This Quarter
-1. **Build a custom metric** for your domain-specific needs
-2. **Establish baselines** for all critical metrics
-3. **Create a feedback loop** from production back to evaluation
+    section This Month
+    Setup CI/CD evaluation    :3, 3
+    Add prod monitoring       :6, 4
+    Create alerts            :10, 2
+
+    section This Quarter
+    Build custom metrics     :12, 6
+    Establish baselines      :18, 4
+    Create feedback loop     :22, 6
+```
+
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin: 2rem 0;">
+
+<div style="background: #e7f5ff; border: 2px solid #339af0; border-radius: 12px; padding: 1.5rem;">
+<h3 style="color: #1864ab; margin-top: 0;">📅 This Week</h3>
+<ol style="margin: 0; padding-left: 1.2rem;">
+<li><strong>Install DeepEval</strong><br/><code style="background: #fff; padding: 0.2rem 0.5rem; border-radius: 4px;">pip install deepeval</code></li>
+<li><strong>Write 3 test cases</strong><br/>for your most critical use cases</li>
+<li><strong>Run evaluation</strong><br/>note metric differences</li>
+</ol>
+</div>
+
+<div style="background: #fff3bf; border: 2px solid #ffd43b; border-radius: 12px; padding: 1.5rem;">
+<h3 style="color: #f08c00; margin-top: 0;">📊 This Month</h3>
+<ol style="margin: 0; padding-left: 1.2rem;">
+<li><strong>Set up CI/CD</strong><br/>catch regressions early</li>
+<li><strong>Implement monitoring</strong><br/>with LangSmith or Braintrust</li>
+<li><strong>Create alerts</strong><br/>for quality & cost issues</li>
+</ol>
+</div>
+
+<div style="background: #d3f9d8; border: 2px solid #51cf66; border-radius: 12px; padding: 1.5rem;">
+<h3 style="color: #2b8a3e; margin-top: 0;">🎯 This Quarter</h3>
+<ol style="margin: 0; padding-left: 1.2rem;">
+<li><strong>Build custom metrics</strong><br/>domain-specific needs</li>
+<li><strong>Establish baselines</strong><br/>for all critical metrics</li>
+<li><strong>Feedback loop</strong><br/>production → evaluation</li>
+</ol>
+</div>
+
+</div>
 
 ### Key Takeaways
 
